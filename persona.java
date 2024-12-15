@@ -17,4 +17,27 @@ public persona () {
 	this.peso=0; //iniciamos en 0
 	this.altura=0; //iniciamos en 0
 }
+
+//Función calcularIMC()
+public int calcularIMC(){
+	double imcCalculo= peso/(altura*altura);//Peso en kg y altura en m
+	int imc=0;
+	
+	//Condición para la devolución del imc
+	if (imcCalculo<20)imc=-1;
+	else if (imcCalculo>=20 && imcCalculo<=25 )imc=0;
+	else imc=1;
+	
+	return imc;
+}
+//Función esMayorDeEdad()
+public boolean esMayorDeEdad() {
+	boolean mayorDeEdad=false;
+	
+	//Condición para la devolución de la edad
+	if(this.edad<18)mayorDeEdad=false;
+	else mayorDeEdad=true;
+	
+	return mayorDeEdad;
+}
 }
